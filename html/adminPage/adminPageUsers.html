@@ -1,0 +1,94 @@
+<script src="../js/adminPageUsers.js"></script>
+<script id="adminRow" type="text/html">
+<tr>
+    <th id="user_id">
+        user_id
+    </th>
+    <th id="email">
+        email
+    </th>
+    <td>
+        <button
+                id="showProfileButton"
+                type="button"
+                data-toggle="modal"
+                data-target="#profileDialog"
+                class="btn btn-primary"
+            >
+                <i class="fas fa-eye d-block d-md-none"></i>
+                <span class="d-none d-md-block">
+                    Bekijk profiel
+                </span>
+            </button>
+        <button
+                id="deactivateButton"
+                type="button"
+                class="btn btn-danger"
+            >
+                <i class="fas fa-toggle-off d-block d-md-none"></i>
+                <span class="d-none d-md-block">
+                    Uitschakelen
+                </span>
+           </button>
+    </td>
+</tr>
+</script>
+<div
+        class="modal fade"
+        id="profileDialog"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+>
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title adminNaam"></h5>
+                <button
+                        type="button"
+                        class="close"
+                        data-dismiss="modal"
+                        aria-label="Close"
+                        onclick="resetAdminPopUp();"
+                >
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-12 col-xl-6">
+                        <p class="adminGeslacht"></p>
+                        <p class="adminGeboorteDatum"></p>
+                        <p class="adminDateOfBirth"></p>
+                        <p class="adminBiography"></p>
+                        <p class="adminPhoneNumber"></p>
+                    </div>
+                    <div id="adminAvatar" class="col-12 col-xl-6">
+                        <img id="standardAvatar" src="https://eitrawmaterials.eu/wp-content/uploads/2016/09/person-icon.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<table class="mb-2 adminUserTable table">
+    <thead>
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Email</th>
+        <th scope="col">Actions</th>
+    </tr>
+    </thead>
+    <!-- user table-->
+    <tbody id="userTableBody"></tbody>
+</table>
+<div align="center">
+    <button
+        class="btn btn-info"
+        onclick="getUsers()"
+        id="moreUsersButton"
+
+    >
+    Laad meer gebruikers
+    </button>
+</div>

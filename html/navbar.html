@@ -1,0 +1,169 @@
+<script src="../js/navbar.js"></script>
+<div class="header-content p-2 pr-4">
+    <div class="d-none d-sm-block">
+        <div class="d-flex justify-content-end">
+            <ul class="header-links list-group list-group-horizontal mb-2 mt-2">
+                <li class="header-links-item d-flex align-content-center mt-2">
+                    <a class="px-2" href="https://fly.corendon.com/">
+                        Online inchecken</a>
+                </li>
+                <li class="header-links-item d-flex align-content-center mt-2">
+                    <a class="px-2" href="https://www.corendon.nl/klantenservice/">
+                        Veelgestelde vragen</a>
+                </li>
+                <li class="header-links-item d-flex align-content-center mt-2">
+                    <a class="px-2" href="https://fly.corendon.com/">
+                        Stoel / bagage reserveren</a>
+                </li>
+                <li class="header-links-item d-flex align-content-center mt-2">
+                    <a class="px-2" href="https://www.corendon.com/">
+                        Vliegtickets</a>
+                </li>
+                <li class=" mt-1">
+                    <img
+                            src="../img/corendonVector.png"
+                            class="mb-1 ml-1"
+                            height="15"
+                            alt="Corendon Match Maker"
+                    >
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row mb-0">
+        <div class="col-4 col-md-3">
+            <img
+                    src="../img/corendon-logo-scherp.svg"
+                    title="Home"
+                    class="homePageLogo img-fluid"
+                    width="250"
+                    onclick="showCurrentFile('#includedContent', 'home')"
+                    alt="Corendon"
+            >
+        </div>
+        <div class="col">
+            <div class="row d-flex justify-content-end mb-0">
+                <div class="col-8 pr-0 d-none d-sm-block">
+                    <div class="gcse-search"></div>
+                </div>
+                <div class="btn-group ml-2">
+                    <div class="btn-group">
+                        <a
+                                class="border border-info rounded nav-link"
+                                type="button" class="btn btn-secondary dropdown-toggle"
+                                data-toggle="dropdown"
+                                data-display="static"
+                                aria-haspopup="true"
+                                aria-expanded="false"
+                        >
+                            <i class="fa fa-user text-info"></i>
+                            <span class="d-none d-md-inline text-info font-weight-bold font-italic">
+                            Mijn Corendon
+                        </span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" id="dropdownItems">
+                            <a
+                                    class="dropdown-item text-info font-italic font-weight-bold"
+                                    id="loginButton"
+                                    href="login.html"
+                                    data-target="#loginModal"
+                                    data-toggle="modal"
+                            >
+                                Inloggen
+                            </a>
+                            <a
+                                    class="dropdown-item text-info font-italic font-weight-bold"
+                                    id="profileButton"
+                                    onclick="showCurrentFile('#includedContent', 'profilePage')"
+                            >
+                                Mijn Profiel
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a
+                                    class="dropdown-item text-info font-italic font-weight-bold"
+                                    id="registerButton"
+                                    href="register.html"
+                                    data-target="#registerModal"
+                                    data-toggle="modal"
+                            >
+                                Registreren
+                            </a>
+                            <a
+                                    class="dropdown-item text-info font-italic font-weight-bold"
+                                    id="uitlogButton"
+                                    href="index.html"
+                                    onclick="removeSession()"
+
+                            >
+                                Uitloggen
+                            </a>
+                        </div>
+                    </div>
+                    <div class="d-block d-sm-none btn-group">
+                        <a
+                                class="border border-danger nav-link rounded"
+                                type="button" class="btn btn-secondary dropdown-toggle"
+                                data-toggle="dropdown"
+                                data-display="static"
+                                aria-haspopup="true"
+                                aria-expanded="false"
+                        >
+                            <i class="fa fa-navicon text-danger"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item text-danger font-italic font-weight-bold"
+                               onclick="showCurrentFile('#includedContent', 'home')">
+                                Home</a>
+                            <div class="dividerOne dropdown-divider"></div>
+                            <a class="drowpdownProfiel dropdown-item text-danger font-italic font-weight-bold"
+                               onclick="showCurrentFile('#includedContent', 'profilePage')">
+                                Profiel</a>
+                            <div class="dividerTwo dropdown-divider"></div>
+                            <a class="drowpdownMatch dropdown-item text-danger font-italic font-weight-bold"
+                               onclick="showCurrentFile('#includedContent', 'matchPage')">
+                                Match</a>
+                            <div class="dividerThree dropdown-divider"></div>
+                            <a class="drowpdownMatches dropdown-item text-danger font-italic font-weight-bold"
+                               onclick="showCurrentFile('#includedContent', 'matchesResultPage')">
+                                Mijn matches</a>
+                            <div class="dividerFour dropdown-divider"></div>
+                            <a class="drowpdownAdmin dropdown-item text-danger font-italic font-weight-bold"
+                               onclick="showCurrentFile('#includedContent', 'adminPage')">
+                                Admin page</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr class="d-sm-none" color="red">
+<nav class="d-none d-sm-block">
+    <div id="header">
+        <div class="btn-group" role="group">
+            <button
+                    id="i1"
+                    class="activeButton navbarButtons home"
+                    title="home"
+                    onclick="showCurrentFile('#includedContent', 'home')">
+                <i class="fa fa-home"></i>
+            </button>
+            <button class="navbarButtons profilePage"
+                    onclick="showCurrentFile('#includedContent', 'profilePage')">
+                Profiel
+            </button>
+            <button class="navbarButtons matchPage"
+                    onclick="showCurrentFile('#includedContent', 'matchPage')">
+                Match
+            </button>
+            <button class="navbarButtons matchesResultPage"
+                    onclick="showCurrentFile('#includedContent', 'matchesResultPage')">
+                Mijn Matches
+            </button>
+            <button class="navbarButtons adminPage"
+                    onclick="showCurrentFile('#includedContent', 'adminPage')">
+                Admin page
+            </button>
+        </div>
+    </div>
+</nav>

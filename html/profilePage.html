@@ -1,0 +1,278 @@
+<script src="../js/profilePage.js"></script>
+<div class="col">
+    <h2
+            id="welcomeMessage"
+            class="font-weight-bold font-italic title red"
+    >
+        Hallo (Naam)
+    </h2>
+    <p class="font-weight-bold font-italic title red">Mijn gegevens</p>
+
+    <!--mijn gegevens-->
+    <span class="text-secondary">Vul hier je gegevens in</span>
+    <p class="font-weight-bold title sub-title red">Profiel</p>
+    <form>
+        <div class="row row-cols-1 row-cols-md-2 mb-0">
+            <div class="col col-12 col-md-6">
+                <label for="inputGender">Geslacht</label>
+                <i class="red">*</i>
+                <select id="inputGender" class="custom-select custom-select-md">
+                    <option value="1">De heer</option>
+                    <option value="2">Mevrouw</option>
+                    <option value="3">Overig</option>
+                </select>
+            </div>
+        </div>
+        <div class="row row-cols-1 row-cols-md-2 mb-0">
+            <div class="col col-12 col-md-4">
+                <div class="form-group">
+                    <label for="inputFirstname">Voornaam (volgens paspoort)</label>
+                    <i class="red">*</i>
+                    <input
+                            type="text"
+                            id="inputFirstname"
+                            class="form-control"
+                            placeholder="Voornaam"
+                            required
+                    >
+                </div>
+            </div>
+            <div class="col col-12 col-md-2">
+                <div class="form-group">
+                    <label for="inputPrefix">Tussenvoegsel</label>
+                    <input
+                            type="text"
+                            id="inputPrefix"
+                            class="form-control"
+                            placeholder="Tussenvoegsel"
+                    >
+                </div>
+            </div>
+            <div class="col col-12 col-md-6">
+                <div class="form-group">
+                    <label for="inputLastname">Achternaam</label>
+                    <i class="red">*</i>
+                    <input
+                            type="text"
+                            id="inputLastname"
+                            class="form-control"
+                            placeholder="Achternaam"
+                            required
+                    >
+                </div>
+            </div>
+            <div class="col col-12 col-md-6">
+                <div class="form-group">
+                    <label for="inputDOB">Geboortedatum</label>
+                    <i class="red">*</i>
+                    <input
+                            type="date"
+                            id="inputDOB"
+                            class="form-control"
+                            placeholder="Geboortedatum"
+                            required
+                    >
+                </div>
+            </div>
+            <div class="col col-12 col-md-6">
+                <div class="form-group">
+                    <label for="inputPhoneNumber">Telefoonnummer</label>
+                    <i class="red">*</i>
+                    <input
+                            type="tel"
+                            id="inputPhoneNumber"
+                            class="form-control"
+                            placeholder="0612345678"
+                            required
+                    >
+                </div>
+            </div>
+            <div class="col col-12 col-md-6">
+                <span class="d-none" id="userProfilePicture"></span>
+                <p class="mb-0">Profielfoto</p>
+                <img
+                        id="profilePagePreview"
+                        src="../img/zakelijke-man.jpg"
+                        alt="default avatar"
+                        class="my-3 img-fluid avatar my-8"/>
+                <div class="custom-file">
+                    <input
+                            onchange="getPhotoUrl()"
+                            type="file"
+                            class="custom-file-input"
+                            id="inputPhoto"
+                            aria-describedby="inputPhoto"
+                    >
+                    <label
+                            id="labelForPhoto"
+                            class="custom-file-label"
+                            for="inputPhoto"
+                    >
+                        Kies een bestand
+                    </label>
+                </div>
+                <button
+                        type="button"
+                        class=" mt-2 button-option text-white font-weight-bold font-italic"
+                        onclick="deleteOldPicture()"
+                >
+                    Gegevens wijzigen
+                </button>
+            </div>
+        </div>
+    </form>
+    <!--account instellingen-->
+    <form>
+        <p class="font-weight-bold title sub-title red">Account instellingen</p>
+        <div class="row row-cols-1 row-cols-md-2 mb-0">
+            <div class="col">
+                <div class="form-group">
+                    <label for="inputEmail">E-mail adres</label>
+                    <i class="red">*</i>
+                    <input
+                            type="email"
+                            id="inputEmail"
+                            class="form-control"
+                            placeholder="e-mail adres"
+                            required
+                    >
+                </div>
+            </div>
+        </div>
+        <div class="row row-cols-1 row-cols-md-2 mb-0">
+            <div class="col">
+                <div class="form-group">
+                    <label for="inputPassword">Password</label>
+                    <i class="red">*</i>
+                    <input
+                            type="password"
+                            id="inputPassword"
+                            class="form-control"
+                            placeholder="password"
+                            required
+                    >
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label for="inputPasswordRepeat">Password repeat</label>
+                    <i class="red">*</i>
+                    <input
+                            type="password"
+                            id="inputPasswordRepeat"
+                            class="form-control"
+                            placeholder="password repeat"
+                            required
+                    >
+                </div>
+            </div>
+            <div class="col">
+                <button
+                        type="button"
+                        onclick="changeAccountSettings()"
+                        class="button-option text-white font-weight-bold font-italic"
+                >
+                    Gegevens wijzigen
+                </button>
+            </div>
+        </div>
+    </form>
+    <!--biography-->
+    <form>
+        <p class="font-weight-bold title sub-title red">Biografie</p>
+        <div class="col pr-0 pl-0 mt-0">
+            <div class="form-group">
+                <label for="inputBio">Bio</label>
+                <textarea
+                        class="form-control"
+                        id="inputBio"
+                        rows="3"
+                ></textarea>
+            </div>
+            <div class="col pl-0">
+                <button
+                        type="button"
+                        onclick="updateBiography()"
+                        class="button-option text-white font-weight-bold font-italic"
+                >
+                    Gegevens wijzigen
+                </button>
+            </div>
+        </div>
+    </form>
+    <p class="font-weight-bold title sub-title red">Hobby's</p>
+    <div class="col-12">
+        <!--        interests are in profilePage.js integrated-->
+        <form id="interests"></form>
+    </div>
+    <p class="font-weight-bold title sub-title red">Top 5 continenten en steden</p>
+    <form>
+        <div class="col col-12 col-md-6">
+            <div class="form-group">
+                <label for="inputTop1">Top 1</label>
+                <select
+                        id="inputTop1"
+                        class="custom-select custom-select-md"
+                ></select>
+            </div>
+        </div>
+        <div class="col col-12 col-md-6">
+            <div class="form-group">
+                <label for="inputTop2">Top 2</label>
+                <select
+                        id="inputTop2"
+                        class="custom-select custom-select-md"
+                ></select>
+            </div>
+        </div>
+        <div class="col col-12 col-md-6">
+            <div class="form-group">
+                <label for="inputTop3">Top 3</label>
+                <select
+                        id="inputTop3"
+                        class="custom-select custom-select-md"
+                ></select>
+            </div>
+        </div>
+        <div class="col col-12 col-md-6">
+            <div class="form-group">
+                <label for="inputTop4">Top 4</label>
+                <select
+                        id="inputTop4"
+                        class="custom-select custom-select-md"
+                ></select>
+            </div>
+        </div>
+        <div class="col col-12 col-md-6">
+            <div class="form-group">
+                <label for="inputTop5">Top 5</label>
+                <select
+                        id="inputTop5"
+                        class="custom-select custom-select-md"
+                ></select>
+            </div>
+        </div>
+        <div class="col pl-0">
+            <button
+                    onclick="setTopCountries()"
+                    class="button-option text-white font-weight-bold font-italic"
+                    type="button"
+            >
+                Gegevens wijzigen
+            </button>
+        </div>
+    </form>
+    <p class="font-weight-bold title sub-title red">Waar bent u al geweest?</p>
+    <p class="font-weight-bold ">Europa</p>
+    <form class="container col-12">
+        <div class="europa row"></div>
+    </form>
+
+    <button
+            type="button"
+            class="my-2 button-option text-white font-weight-bold font-italic bg-danger"
+            onclick="deleteProfile()"
+    >
+        Account verwijderen
+    </button>
+</div>

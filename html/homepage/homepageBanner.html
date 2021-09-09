@@ -1,0 +1,91 @@
+<script src="../js/homepageBanner.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<div class="homePageTop col-12 overflow-hidden px-0" style="height: 720px">
+    <div
+        id="carouselExampleFade"
+        class="carousel slide carousel-fade"
+        data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="../img/vakantieshot.jpg"
+                     height="798"
+                     width="1300"
+                     alt="Vakantie!"/>
+            </div>
+            <div class="carousel-item">
+
+                <img src="../img/chinese_wall.png"
+                     height="798"
+                     width="1300"
+                     alt="Vakantie!"/>
+            </div>
+            <div class="carousel-item">
+                <img src="../img/paris.png"
+                     height="798"
+                     width="1300"
+                     alt="Vakantie!"/>
+            </div>
+            <div class="carousel-item">
+                <img src="../img/kano.png"
+                     height="798"
+                     width="1300"
+                     alt="Vakantie!"/>
+            </div>
+            <div class="carousel-item">
+                <img src="../img/elephant.png"
+                     height="798"
+                     width="1300"
+                     alt="Vakantie!"/>
+            </div>
+        </div>
+    </div>
+    <div
+        class="homePageTextBlock col-12 col-sm-6 d-flex flex-column justify-content-center"
+        id="loginCard">
+        <div class="card text-white mb-3">
+            <div class="cardTop card-header font-italic">
+                <h5>
+                    Corendon
+                    <br>
+                    Match-Maker
+                </h5>
+            </div>
+            <div class="cardTopBody card-body">
+                <h5 class="card-title font-weight-bold">
+                    Hey Reisliefhebber,
+                </h5>
+                <p class="text-white font-italic">
+                    Hier kan jij jouw ultieme match vinden voor de vakantie van je dromen, op basis van jouw
+                    voorkeuren en interesses! Vind nu jouw match, want samen reizen is toch veel leuker?
+                </p>
+                <button class="col button-option text-white"
+                        id="registerButtonCard"
+                        href="register.html"
+                        data-target="#registerModal"
+                        data-toggle="modal"
+                >
+                    Registreren
+                </button>
+
+                <button class="col button-option text-white"
+                        id="matchButtonCard"
+                        onclick="showCurrentFile('#includedContent', 'matchPage')"
+                >
+                    Matchen
+                </button>
+
+                <button class="col button-option text-white mt-2"
+                        id="myMatchesCard"
+                        onclick="showCurrentFile('#includedContent', 'matchResultPage')"
+                >
+                    Mijn Matches
+                </button>
+                <button class="col button-option mt-2 text-white"
+                        onclick="moreInfo()"
+                >
+                    Meer informatie
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

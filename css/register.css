@@ -1,0 +1,29 @@
+.registerButton {
+    background-color: #6db93f !important;
+    color: white !important;
+}
+.inlogText {
+    font-size: 14px;
+    font-weight: bold;
+}
+.modal-dialog {
+    background-color: white;
+    width: 600px;
+    margin: 6em auto;
+}
+.registerText {
+    font-family: UniSansBoldItalic,Helvetica,Arial,sans-serif;
+    font-size: 22px;
+    color: #D81E05;
+    font-style: italic;
+    font-weight: bold;
+}
+.registerErrorMessage {
+    font-size: 14px;
+    color: red;
+    font-weight: bolder;
+}
+.registerFields {
+    font-weight: 500;
+    color: #626262;
+}

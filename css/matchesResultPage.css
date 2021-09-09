@@ -1,0 +1,12 @@
+.match-width {
+    max-width: 75% !important;
+}
+.black {
+    color: #000 !important;
+}
+.red {
+    color: #D81E05;
+}
+button.bg-secondary {
+    pointer-events: none;
+}

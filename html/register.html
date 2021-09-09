@@ -1,0 +1,141 @@
+<script src="../js/register.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="modal-header">
+    <img src="../img/corendon-logo2.jpg" class="img-fluid">
+</div>
+<div class="modal-body">
+    <form
+        id="registerSubmit"
+        name="registerForm"
+    >
+        <table class="table table-bordered">
+            <tr align="center">
+                <th colspan="2" class="registerText">
+                    <i class="fa fa-plus-circle"></i>
+                    Registreren
+                </th>
+            </tr>
+            <tr>
+                <td class="registerFields">*  Voornaam:</td>
+                <td>
+                    <input
+                        type="text"
+                        class="form-control form-control-sm"
+                        required="required"
+                        name="firstname"
+                        id="firstname"
+                    >
+                    <i class="firstname"></i>
+                </td>
+            </tr>
+            <tr>
+                <td class="registerFields">   Tussenvoegsel:</td>
+                <td>
+                    <input
+                            type="text"
+                            class="form-control form-control-sm"
+                            name="prefix"
+                            id="prefix"
+                    >
+                    <i class="prefix"></i>
+                </td>
+            </tr>
+            <tr>
+                <td class="registerFields">*  Achternaam:</td>
+                <td>
+
+                    <input
+                        type="text"
+                        class="form-control form-control-sm"
+                        required="required"
+                        name="lastname"
+                        id="lastname"
+                    >
+                    <i class="lastname" for="lastname"></i>
+                </td>
+            </tr>
+            <tr>
+                <td class="registerFields">*  Email:</td>
+                <td>
+                    <input
+                        type="email"
+                        class="form-control form-control-sm"
+                        required="required"
+                        name="email"
+                        id="email"
+                    >
+                    <i class="email" for="email"></i>
+                </td>
+            </tr>
+            <tr>
+                <td class="registerFields">*  Wachtwoord:</td>
+                <td>
+                    <input
+                           type="password"
+                           class="form-control form-control-sm"
+                           required="required"
+                           name="password"
+                           id="password"
+                    >
+                    <i class="password" for="password"></i>
+                </td>
+            </tr>
+            <tr>
+                <td class="registerFields">*  Herhaal Wachtwoord:</td>
+                <td>
+                    <input
+                           type="password"
+                           class="form-control form-control-sm"
+                           required="required"
+                           name="repeatPassword"
+                           id="repeatPassword"
+                    >
+                    <i class="repeatPassword" for="repeatPassword"></i>
+                </td>
+            </tr>
+            <tr>
+                <td class="registerFields">*  Geslacht:</td>
+                <td>
+                    <select class="custom-select custom-select-sm"
+                            name="geslacht"
+                            id="gender"
+                    >
+                        <option value="1">Man</option>
+                        <option value="2">Vrouw</option>
+                        <option value="3">Andere</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <p class="font-weight-bold font-italic">Velden met een * zijn verplicht</p>
+        <div>
+            <b>Heb je al een account? Je kunt dan hier</b>
+            <a  class="text-primary inlogText text-decoration-none"
+                data-dismiss="modal"
+                href="login.html"
+                data-target="#loginModal"
+                data-toggle="modal">
+                Inloggen
+            </a>
+        </div>
+        <div class="modal-footer">
+            <button type="button"
+                    class="btn btn-danger"
+                    data-dismiss="modal"
+                    onclick="cancelForm()"
+            >
+                <i class="fas fa-times"></i>
+                Annuleer
+            </button>
+            <button
+                type="button"
+                id="registerButton"
+                class="btn registerButton"
+                onclick="checkFormValidity()"
+            >
+                <i class="fas fa-check"></i>
+                Registreren
+            </button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,91 @@
+.homePageImage {
+    max-width: 1200px;
+}
+.homePageTextBlock {
+    z-index: 100;
+    height: 500px;
+    top: -850px !important;
+    width: 200px;
+}
+.cardTop{
+    background-color: #d81e05 !important;
+}
+.card-body {
+    min-height: auto !important;
+}
+
+.cardTopBody{
+    background-color: #d81e05 !important;
+}
+
+.button-option {
+    border-radius: 5px;
+
+    background-color: #18C3EA;
+}
+.cardMid{
+    background-color: #FFC61E;
+    height: 600px;
+}
+.cardMidHeader {
+    background-color: #17a2b8 !important;
+}
+.cardMidBody {
+    background-color: #17a2b8;
+
+}
+.cardBot{
+    background-color: #d81e05;
+}
+.cardBotHeader {
+    background-color: #d81e05 !important;
+}
+.cardBotBody {
+    background-color: #d81e05;
+
+}
+.faqDropdown {
+    background-color: #d81e05 !important;
+}
+.appIcon {
+    border: 3px solid lightgrey;
+    border-radius: 20px;
+}
+
+.wave {
+    position: relative;
+    height: 570px;
+    background: #e0efe3;
+}
+
+.wave:before {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 340px;
+    height: 580px;
+    background-color: white;
+    right: -5px;
+    top: 40px;
+}
+
+.wave:after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 300px;
+    height: 570px;
+    background-color: #e0efe3;
+    left: 0;
+    top: 27px;
+}
+.redWave {
+    height: 150px;
+    width: 100%;
+    background-color: #d81e05 !important;
+}
+.xpText {
+    font-size: medium;
+}

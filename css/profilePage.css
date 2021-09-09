@@ -1,0 +1,29 @@
+.title{
+    margin: 18px 0 20px 0;
+    font-size: 25px;
+    line-height: 1;
+    text-transform: uppercase;
+}
+.sub-title {
+    font-size: 13px;
+    line-height: 13px;
+    background-color: #f7f7f7;
+    padding: 14px 18px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.red {
+    color: #D81E05;
+}
+.button-option {
+    border-radius: 5px;
+    padding: 8px 16px;
+    line-height: 1.1;
+    background-color: #18C3EA;
+}
+.avatar {
+    max-width: 35% !important;
+}
+.hobbys {
+    max-width: 15%;
+}

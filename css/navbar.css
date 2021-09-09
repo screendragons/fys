@@ -1,0 +1,42 @@
+button {
+    color: #fff;
+    background-color: #D81E05;
+    border-style: none;
+    outline: none !important;
+    padding: 10px;
+}
+nav  {
+    background-color: #D81E05;
+}
+nav div {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.homePageLogo {
+    cursor: pointer;
+}
+.activeButton {
+    border-bottom: 5px solid white;
+}
+.navbarButtons:hover {
+    border-bottom: 5px solid white;
+}
+
+.header-content{
+    margin: 0 auto;
+    max-width: 1200px;
+}
+.header-links-item{
+    border-right: 1px solid #d81e05
+
+}
+.gsc-search-button {
+    margin-top: 0;
+}
+.gsc-control-cse {
+    padding: 0 !important;
+}
+.gsc-search-button-v2 {
+    padding: 10px 30px;
+}
+

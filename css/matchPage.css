@@ -1,0 +1,28 @@
+/*.match-width {*/
+/*    max-width: 75% !important;*/
+/*}*/
+.black {
+    color: #000 !important;
+}
+.red {
+    color: #D81E05;
+}
+button.bg-secondary {
+    pointer-events: none;
+}
+.middle {
+    vertical-align: middle !important;
+}
+
+.card-matches {
+    height: 18rem;
+    border-style: none !important;
+    background: none !important;
+}
+.interestDiv {
+    height: 100px;
+}
+.card.overflow-hidden {
+    border-style: none !important;
+    height: 15rem !important;
+}

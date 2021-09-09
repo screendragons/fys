@@ -1,0 +1,64 @@
+<script src="../js/login.js"></script>
+
+<div class="modal-header">
+    <img src="../img/corendon-logo2.jpg" class="img-fluid">
+</div>
+<div class="modal-body">
+    <form id="loginForm">
+        <table class="table table-bordered">
+            <tr align="center">
+                <th colspan="2" class="registerText">
+                    <i class="fa fa-plus-circle"></i>
+                    Inloggen
+                </th>
+            </tr>
+            <tr>
+                <td class="registerFields">*  Email:</td>
+                <td>
+                    <input
+                            type="email"
+                            class="form-control form-control-sm"
+                            required="required"
+                            name="email"
+                            id="email"
+                    >
+                    <i class="email" for="email"></i>
+                </td>
+            </tr>
+            <tr>
+                <td class="registerFields">*  Wachtwoord</td>
+                <td>
+                    <input
+                        type="password"
+                        class="form-control form-control-sm"
+                        required="required"
+                        name="password"
+                        id="password"
+                    >
+                    <i class="password" for="password"></i>
+                </td>
+            </tr>
+        </table>
+        <i class="errorMessage" for="errorMessage"></i>
+        <div class="modal-footer">
+            <button
+                    type="button"
+                    class="btn btn-danger"
+                    data-dismiss="modal"
+                    onclick="loginCancel()"
+            >
+                <i class="fas fa-times"></i>
+                Annuleer
+            </button>
+            <button
+                    id="submitButton"
+                    type="button"
+                    class="btn registerButton"
+                    onclick="checkLoginForm();"
+            >
+                <i class="fas fa-check"></i>
+                Log in
+            </button>
+        </div>
+    </form>
+</div>
